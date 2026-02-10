@@ -17,6 +17,7 @@ btn.addEventListener("click",async () => {
         <p>Country: ${user.location.country}</p> 
      `;
      } catch (error) {
-       card.innerHTML = "<p style = 'color:red'>Помилка завантаження</p>";
-     }
+    console.error(error);
+    card.innerHTML = `<p style="color:red">Помилка завантаження: ${error.message}</p>`;
+  }
 })
